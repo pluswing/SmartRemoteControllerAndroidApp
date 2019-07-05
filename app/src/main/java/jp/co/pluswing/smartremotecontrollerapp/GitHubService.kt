@@ -8,5 +8,5 @@ data class Repo(val name: String)
 
 interface GitHubService {
     @GET("users/{user}/repos")
-    fun listRepos(@Path("user") user: String): Call<List<Repo>>
+    suspend fun listRepos(@Path("user") user: String): List<Repo>
 }
