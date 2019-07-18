@@ -24,6 +24,11 @@
             android:onClick="@{() -> vm.click()}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+        <Button
+            android:text="CHANGE"
+            android:onClick="@{() -> vm.changeValue()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 </layout>

@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         val vm = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
         binding.vm = vm
+        binding.lifecycleOwner = this
 
         val retrofit = Retrofit.Builder()
             .baseUrl("https://api.github.com/")
