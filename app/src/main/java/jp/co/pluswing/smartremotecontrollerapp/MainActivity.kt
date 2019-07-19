@@ -1,19 +1,16 @@
 package jp.co.pluswing.smartremotecontrollerapp
 
-import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import jp.co.pluswing.smartremotecontrollerapp.databinding.ActivityMainBinding
+import jp.co.pluswing.smartremotecontrollerapp.model.IrData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import kotlin.coroutines.CoroutineContext
@@ -45,6 +42,17 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
             val repos = service.listRepos("octocat")
             Log.d("ESP32APP", repos.toString())
         }
+
+        vm.items.value = arrayListOf(
+            IrData().apply {
+                no = 1
+                name = "あいうおえ"
+            },
+            IrData().apply {
+                no = 2
+                name = "かきくけこ"
+            }
+        )
     }
 
     override fun onPause() {
