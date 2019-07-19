@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SmartRemoteControllerApp</string>
+    <string name="ir_api_endpoint">http://192.168.1.123</string>
 </resources>

@@ -1,4 +1,4 @@
-package jp.co.pluswing.smartremotecontrollerapp
+package jp.co.pluswing.smartremotecontrollerapp.activity.main
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
